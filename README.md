@@ -22,7 +22,7 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 
 > **Perl** (https://www.perl.org/get.html) (v5.30.0)
 
-[Databases][https://figshare.com/ndownloader/articles/22085267/versions/1]
+[Databases](https://figshare.com/ndownloader/articles/22085267/versions/1)
 
 ## Installation:
 
