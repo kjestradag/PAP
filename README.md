@@ -4,6 +4,8 @@
   <h1>${{\color{red}P}arallel\ {\color{red}A}nnotation\ {\color{red}P}ipeline}$</h1>
 </div>
 
+![dag](https://user-images.githubusercontent.com/43998702/218347952-633b9b35-2e9d-45b5-ad55-10a8ebe3794d.svg)
+
 <div align="justify">
 Parallel Annotation Pipeline was developed using the Snakemake workflow management system, providing a streamlined and automated approach to annotating protein sequences, enabling researchers to rapidly and accurately characterize large-scale proteomic data sets.
 PAP integrates seamlessly with a range of existing bioinformatics tools and databases, allowing you to easily transfer annotations from multiple sources and combine them into a single, comprehensive annotation set.
@@ -13,6 +15,8 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 ## Dependencies:
 
 > **blastp** (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+
+> **diamond** (https://github.com/bbuchfink/diamond)
 
 > **hmmscan** (http://hmmer.org/)
 
@@ -49,7 +53,7 @@ You also need to download and have in your path **all the "bin" scripts**.
 You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) on their site for more details of this.
 
 ## Quick usage: (Install Option 1)
-  > PAP <genome.fasta> <protein.fasta>
+  > PAP <protein.fasta>
 
   notes:
  
@@ -62,40 +66,20 @@ You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_sta
 ## Quick usage: (Install Option 2)
 
 For genome.fasta and protein.faa file name run:
-  > snakemake --cores <number of threads> -s /path/of/Snakefile
+  > snakemake --cores <thread_numbers> -s /path/of/Snakefile
 
 If genome or protein fastas files have other names, then run:
-  > snakemake --cores <core_numbers> --config PROTREF="current_protein_fasta_filename" GENOME="current_genome_fasta_filename"
+  > snakemake --cores <thread_numbers> --config PROTREF="current_protein_fasta_filename" -s /path/of/Snakefile
 
-### More options
-
-  > snakemake --cores <core_numbers> --rerun-incomplete --config PROTREF="protein.faa" GENOME="genome.fasta" PREFIX="prefix_outputfilename" NEWPREFIX="prefix_newgenenames_" -s path/of/Snakefile_PAP
-
-  **About variables that PAP optionally needs:**
-  
   PROTREF= "protein.faa" # Fasta file of the reference proteins that we want to transfer or annotate in our genome. Default: "protein.faa"
   
 ## Output files
 
-The output of PAP produces 4 files:
+A file in tsv format with the annotation of the proteins.
 
-### File "<prefix>.gff"
+### File "annotation_table.tbl"
 
-Annotation file in [GFF](https://www.ensembl.org/info/website/upload/gff.html#fields) format of the transferred proteins.
-
-### File "<prefix>.gbk"
-
-Annotation file in [GenBank](https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html) format of the transferred proteins.
-  
-### File "<prefix>.ffn"
-
-Fasta file of all coding sequences (CDs).
-  
-### File "<prefix>.faa"
-
-<p align="justify">
-Fasta file of the peptide sequences.
-</p>
+![pap_output](https://user-images.githubusercontent.com/43998702/218347713-02934c45-2fcb-4413-9cd5-5a8c4728c13e.png)
 
 ## Acknowledgments
 
