@@ -3,14 +3,13 @@ Author: Karel Estrada
 Affiliation: UUSMB
 Aim: A Snakemake workflow for Annotation Pipeline.
 Date: may 2017
-Run: snakemake --cores <core_numbers> --rerun-incomplete --config PROTREF="protein.faa" -s /home/karel/bin/Snakefile_annot
+Run: snakemake --cores <core_numbers> --rerun-incomplete --config PROTREF="protein.faa" -s /path/to/Snakefile_annot
 Latest modification: Wed May  3 10:51:33 CDT 2017
 """
 
-# utiles: %> snakemake -np --unlock -s Snakefile_annot # cuando se sale inesperadamente snakemake y luego se queja de que no puede hacer lock del directorio de trabajo
 
-SP= "/free/databases/sprot/uniprot_sprot.fasta"
-PF= "/free/databases/pfam/Pfam-A.hmm"
+SP= "../../DB/uniprot_sprot.fasta"
+PF= "../../DB/Pfam-A.hmm"
 
 if "PROTREF" not in config.keys():
     PROTREF = "Inside"
@@ -81,4 +80,7 @@ rule annot_table:
     message:
         "Generating the annotation table.."
     shell:
-        "create_annotation_table.l {input[0]} {input[1]} {input[2]} {input[3]} > {output}"
+        """
+        create_annotation_table.l {input[0]} {input[1]} {input[2]} {input[3]} > {output}
+        rm -f GO_and_keggs_annot_final.txt PFAM.out pfam.log signalp.out signalp.STDOUT blastp_sprot.outfmt6
+        """
