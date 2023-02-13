@@ -1,40 +1,30 @@
 
 <div align="center">
-  <h1>${\color{brown}PATT}$</h1>
-  <h1>${{\color{red}P}roteome\ {\color{red}A}nnotation\ {\color{red}T}ransfer\ {\color{red}T}ool}$</h1>
+  <h1>${\color{brown}PAP}$</h1>
+  <h1>${{\color{red}P}arallel\ {\color{red}A}nnotation\ {\color{red}P}ipeline}$</h1>
 </div>
 
-![pipeline](https://user-images.githubusercontent.com/43998702/218341198-6ab0f54c-c842-43bc-9a05-7c53cf014147.png)
-
 <div align="justify">
-Proteome Annotation Transfer Tool (PATT) is a powerful and versatile software tool for transferring annotations from a reference genome to an unannotated query genome. Developed using the Snakemake workflow management system, PATT provides a highly parallelized architecture and efficient approach to annotating new genomes, enabling researchers to rapidly and accurately annotate large-scale genomic data sets.
-
-PATT is designed to simplify the process of annotating new genomes, streamlining your research process and delivering high-quality results.
+Parallel Annotation Pipeline was developed using the Snakemake workflow management system, providing a streamlined and automated approach to annotating protein sequences, enabling researchers to rapidly and accurately characterize large-scale proteomic data sets.
+Parallel Annotation Pipeline integrates seamlessly with a range of existing bioinformatics tools and databases, allowing you to easily transfer annotations from multiple sources and combine them into a single, comprehensive annotation set.
+Additionally, PAP version for HPC cluster and its highly parallelized architecture make it the ideal tool for researchers with this type of computing resources looking to annotate protein sequences.
 </div>
 
 ## Dependencies:
 
-> **Snakemake** (https://snakemake.readthedocs.io/en/stable/index.html)
+> **blastp** (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 
-> **Exonerate** (https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) (v.2.4.0)
+> **hmmscan** (http://hmmer.org/)
 
 > **Perl** (https://www.perl.org/get.html) (v5.30.0)
-
-> **AWK**
-
-**Perl Modules**
-
->  Getopt::Long
-
->  Parallel::ForkManager
 
 ## Installation:
 
 ### Option 1
 
-PATT pipeline it is written in Snakemake and Perl. For greater convenience/ease of installing PATT, we use the [Apptainer/Singularity](https://apptainer.org/) container platform and build an image with the complete environment (script and dependencies) needed to run PATT.
+PAP pipeline it is written in Snakemake and Perl. For greater convenience/ease of installing PAP, we use the [Apptainer/Singularity](https://apptainer.org/) container platform and build an image with the complete environment (script and dependencies) needed to run PATT.
 
-You just need to [download](https://figshare.com/ndownloader/files/37939014) the Singularity image **PATT** and have installed "Apptainer/Singularity". If you don't have it installed, you can install it:
+You just need to [download](https://figshare.com/ndownloader/files/37939014) the Singularity image **PAP** and have installed "Apptainer/Singularity". If you don't have it installed, you can install it:
 
 **with Conda** 
 >  conda install -c conda-forge singularity 
@@ -59,15 +49,15 @@ You also need to download and have in your path **all the "bin" scripts**.
 You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) on their site for more details of this.
 
 ## Quick usage: (Install Option 1)
-  > PATT <genome.fasta> <protein.fasta>
+  > PAP <genome.fasta> <protein.fasta>
 
   notes:
  
-    1- You need to put "PATT" in your path, otherwise you must give the whole path so that it can be found.
+    1- You need to put "PAP" in your path, otherwise you must give the whole path so that it can be found.
 
-    2- The input [fasta](https://en.wikipedia.org/wiki/FASTA_format) files must exist in your $HOME, otherwise you need to set the environment variable SINGULARITY_BIND
+    2- The input [fasta](https://en.wikipedia.org/wiki/FASTA_format) file must exist in your $HOME, otherwise you need to set the environment variable SINGULARITY_BIND
     to bind paths where your sequences are located
-    ex: export SINGULARITY_BIND="../path/for/the/inputs/fasta"
+    ex: export SINGULARITY_BIND="../path/for/the/input/fasta"
 
 ## Quick usage: (Install Option 2)
 
@@ -83,16 +73,8 @@ If genome or protein fastas files have other names, then run:
 
   **About variables that PATT optionally needs:**
   
-  GENOME= "genome.fasta" # Fasta file of genome that we want to annotate. Default: "genome.fasta"
-  
   PROTREF= "protein.faa" # Fasta file of the reference proteins that we want to transfer or annotate in our genome. Default: "protein.faa"
   
-  PREFIX= "prefix" # Output file prefix. Default: "mySpecies"
-  
-  NEWPREFIX= "prefix_" # Prefix name we want for the proteins/transcripts in the our genome. We suggest ending in "_" for aesthetics. Default: "{PREFIX}_"
-  
-  OLDPREFIX= "prefix" # Prefix that the proteins have in the faa to be transferred. Perl regular expressions are accepted ex: "^\S+gene[^_|\s]+". PATT generates new names of the transferred proteins keeping all(default) or a part of the original annotated protein identifier. Default: "=gene". ex: if the names of the proteins to be transferred have this form "tsol_\d+", my variable can be OLDPREFIX= "=genetsol_" and the new names will be "mySpecies_\d+"
-
 ## Output files
 
 The output of RaPDTool produces 4 files:
@@ -117,6 +99,8 @@ Fasta file of the peptide sequences.
 
 ## Acknowledgments
 
-PATT wouldn't be the same without my fellow researchers at the UUSMB (Unidad Universitaria de Secuenciación Masiva y Bioinformática), in particular, Jerome Verleyen and Alejandro Sanchez, who helped me with ideas and challenges during PATT's development.
+Developers: **M.C. Karel Estrada; M.C Jerome Verleyen**
 
-PATT uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Exonerate](https://www.ebi.ac.uk/about/vertebrate-genomics/software/exonerate) to perform alignments and [Readseq](https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/0471250953.bia01es00) and Mario Stanke script "gff2gbSmallDNA.pl" to format manipulations.
+PAP wouldn't be the same without my fellow researchers at the UUSMB (Unidad Universitaria de Secuenciación Masiva y Bioinformática), in particular Alejandro Sanchez.
+
+PAP uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Blastp](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) and [HMMER](http://hmmer.org/) to perform alignments and [SignalP](https://github.com/fteufel/signalp-6.0) for signal peptide prediction.
