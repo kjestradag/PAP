@@ -22,7 +22,7 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 
 ### Option 1
 
-PAP pipeline it is written in Snakemake and Perl. For greater convenience/ease of installing PAP, we use the [Apptainer/Singularity](https://apptainer.org/) container platform and build an image with the complete environment (script and dependencies) needed to run PATT.
+PAP pipeline it is written in Snakemake and Perl. For greater convenience/ease of installing PAP, we use the [Apptainer/Singularity](https://apptainer.org/) container platform and build an image with the complete environment (script and dependencies) needed to run PAP.
 
 You just need to [download](https://figshare.com/ndownloader/files/37939014) the Singularity image **PAP** and have installed "Apptainer/Singularity". If you don't have it installed, you can install it:
 
@@ -69,15 +69,15 @@ If genome or protein fastas files have other names, then run:
 
 ### More options
 
-  > snakemake --cores <core_numbers> --rerun-incomplete --config PROTREF="protein.faa" GENOME="genome.fasta" PREFIX="prefix_outputfilename" NEWPREFIX="prefix_newgenenames_" -s path/of/Snakefile_PATT
+  > snakemake --cores <core_numbers> --rerun-incomplete --config PROTREF="protein.faa" GENOME="genome.fasta" PREFIX="prefix_outputfilename" NEWPREFIX="prefix_newgenenames_" -s path/of/Snakefile_PAP
 
-  **About variables that PATT optionally needs:**
+  **About variables that PAP optionally needs:**
   
   PROTREF= "protein.faa" # Fasta file of the reference proteins that we want to transfer or annotate in our genome. Default: "protein.faa"
   
 ## Output files
 
-The output of RaPDTool produces 4 files:
+The output of PAP produces 4 files:
 
 ### File "<prefix>.gff"
 
