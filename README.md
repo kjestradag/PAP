@@ -77,7 +77,7 @@ A file in tsv format with the annotation of the proteins.
 
 ### File "annotation_table.tbl"
 
-
+![pap_output](https://user-images.githubusercontent.com/43998702/218347713-02934c45-2fcb-4413-9cd5-5a8c4728c13e.png)
 
 ## Acknowledgments
 
