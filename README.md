@@ -4,6 +4,8 @@
   <h1>${{\color{red}P}arallel\ {\color{red}A}nnotation\ {\color{red}P}ipeline}$</h1>
 </div>
 
+![dag](https://user-images.githubusercontent.com/43998702/218347952-633b9b35-2e9d-45b5-ad55-10a8ebe3794d.svg)
+
 <div align="justify">
 Parallel Annotation Pipeline was developed using the Snakemake workflow management system, providing a streamlined and automated approach to annotating protein sequences, enabling researchers to rapidly and accurately characterize large-scale proteomic data sets.
 PAP integrates seamlessly with a range of existing bioinformatics tools and databases, allowing you to easily transfer annotations from multiple sources and combine them into a single, comprehensive annotation set.
