@@ -14,6 +14,8 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 
 > **blastp** (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 
+> **diamond** (https://github.com/bbuchfink/diamond)
+
 > **hmmscan** (http://hmmer.org/)
 
 > **Perl** (https://www.perl.org/get.html) (v5.30.0)
@@ -49,7 +51,7 @@ You also need to download and have in your path **all the "bin" scripts**.
 You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) on their site for more details of this.
 
 ## Quick usage: (Install Option 1)
-  > PAP <genome.fasta> <protein.fasta>
+  > PAP <protein.fasta>
 
   notes:
  
@@ -62,10 +64,10 @@ You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_sta
 ## Quick usage: (Install Option 2)
 
 For genome.fasta and protein.faa file name run:
-  > snakemake --cores <number of threads> -s /path/of/Snakefile
+  > snakemake --cores <thread_numbers> -s /path/of/Snakefile
 
 If genome or protein fastas files have other names, then run:
-  > snakemake --cores <core_numbers> --config PROTREF="current_protein_fasta_filename" GENOME="current_genome_fasta_filename"
+  > snakemake --cores <thread_numbers> --config PROTREF="current_protein_fasta_filename" -s /path/of/Snakefile
 
 ### More options
 
