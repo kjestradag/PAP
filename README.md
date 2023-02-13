@@ -69,35 +69,15 @@ For genome.fasta and protein.faa file name run:
 If genome or protein fastas files have other names, then run:
   > snakemake --cores <thread_numbers> --config PROTREF="current_protein_fasta_filename" -s /path/of/Snakefile
 
-### More options
-
-  > snakemake --cores <core_numbers> --rerun-incomplete --config PROTREF="protein.faa" GENOME="genome.fasta" PREFIX="prefix_outputfilename" NEWPREFIX="prefix_newgenenames_" -s path/of/Snakefile_PAP
-
-  **About variables that PAP optionally needs:**
-  
   PROTREF= "protein.faa" # Fasta file of the reference proteins that we want to transfer or annotate in our genome. Default: "protein.faa"
   
 ## Output files
 
-The output of PAP produces 4 files:
+A file in tsv format with the annotation of the proteins.
 
-### File "<prefix>.gff"
+### File "annotation_table.tbl"
 
-Annotation file in [GFF](https://www.ensembl.org/info/website/upload/gff.html#fields) format of the transferred proteins.
 
-### File "<prefix>.gbk"
-
-Annotation file in [GenBank](https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html) format of the transferred proteins.
-  
-### File "<prefix>.ffn"
-
-Fasta file of all coding sequences (CDs).
-  
-### File "<prefix>.faa"
-
-<p align="justify">
-Fasta file of the peptide sequences.
-</p>
 
 ## Acknowledgments
 
