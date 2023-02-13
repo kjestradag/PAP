@@ -22,6 +22,8 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 
 > **Perl** (https://www.perl.org/get.html) (v5.30.0)
 
+[Databases][https://figshare.com/ndownloader/articles/22085267/versions/1]
+
 ## Installation:
 
 ### Option 1
@@ -47,7 +49,7 @@ For more details of the Apptainer installation process, go [here](https://apptai
 
 ### Option 2
 
-Make sure you have all **dependencies** installed.
+Make sure you have all **dependencies** and Databases are properly installed.
 You also need to download and have in your path **all the "bin" scripts**.
 
 You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) on their site for more details of this.
