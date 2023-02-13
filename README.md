@@ -6,7 +6,7 @@
 
 <div align="justify">
 Parallel Annotation Pipeline was developed using the Snakemake workflow management system, providing a streamlined and automated approach to annotating protein sequences, enabling researchers to rapidly and accurately characterize large-scale proteomic data sets.
-Parallel Annotation Pipeline integrates seamlessly with a range of existing bioinformatics tools and databases, allowing you to easily transfer annotations from multiple sources and combine them into a single, comprehensive annotation set.
+PAP integrates seamlessly with a range of existing bioinformatics tools and databases, allowing you to easily transfer annotations from multiple sources and combine them into a single, comprehensive annotation set.
 Additionally, PAP version for HPC cluster and its highly parallelized architecture make it the ideal tool for researchers with this type of computing resources looking to annotate protein sequences.
 </div>
 
