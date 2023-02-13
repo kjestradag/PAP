@@ -1,5 +1,4 @@
-#!/usr/bin/perl -w
-use lib "$ENV{'HOME'}/perl"; 
+#!/usr/bin/env perl
 use strict;
 
 @ARGV > 0 || die "usage: $0 <blastp.out> <pfam.out> <signalp.out> <GO_and_keggs_annot.table>\n";
@@ -80,7 +79,5 @@ foreach my $elem ( sort keys %par ){
     $sp{$par{$elem}{sp}}{ecnumber} ||= "'ecNA'";
     
     $par{$elem}{signalp_from} ? ($par{$elem}{coords}= "signalp_$par{$elem}{signalp_from}-$par{$elem}{signalp_to}") : ($par{$elem}{coords}= "'signalp_coordsNA'");
-#     print STDERR "$elem\n$par{$elem}{coords}\n";
-    
     print "$elem\t$par{$elem}{sp}^E:$par{$elem}{sp_eval}\t$sp{$par{$elem}{sp}}{prod}\t$par{$elem}{pfam}^E:$par{$elem}{pfam_eval}\t$par{$elem}{pfam_prod}\t$par{$elem}{coords}\t$sp{$par{$elem}{sp}}{go}\t$sp{$par{$elem}{sp}}{knumber}\t$sp{$par{$elem}{sp}}{cog}\t$sp{$par{$elem}{sp}}{ecnumber}\n";
 }

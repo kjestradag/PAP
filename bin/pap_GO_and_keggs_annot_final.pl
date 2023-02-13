@@ -1,10 +1,7 @@
-#!/usr/bin/perl -w
-use lib "$ENV{'HOME'}/perl"; 
-use yo qw(:DEFAULT); 
-use Data::Dumper;     # Hint: print Dumper(\@cosa); 
+#!/usr/bin/env perl
 use strict;
 
-# Asocia GO term y K_numbers a los IDS de uniportKB
+
 
 @ARGV > 0 || die "usage: $0 <blastp>
 devuelve una tabla con la relacion de \"Swiss_prot_id\tGOs\tKs_numbers\tCOGs\tECs_numbers\"\n";
@@ -20,43 +17,18 @@ while(<IN>){
         $rel{sp}{$1}++;
     }
 }
-# foreach my $elem ( sort keys %{$rel{sp}} ){
-#     print "$elem\n";
-# }
-# exit;
 
 open IN, $Goterm or die "Cant read $Goterm\n";  #  cacha los GO term que estan anotados para cada ID de SwissProt que tenemos 
-        # while(<IN>){
-        #     if( /^UniProtKB\s+(\S+)\s+\S+\s+(GO:\d+)\s+/ ){
-        #         my $spid= $1;
-        # #         print "spid\t$spid\n";
-        #         if( $rel{sp}{$spid} ){
-        # #             print "entre\n";
-        #             push @{$rel{gos}{$spid}}, $2;
-        #         }else{
-        #             
-        #         }
-        # #         (push @{$rel{$1}{gos}}, $2) if defined $rel{$1}{sp};
-        #     }
-        # }
-
-# el while de abajo es para el curso, el que tenia esra el comentado de arriba
 while(<IN>){
     if( /^(\S+)\s+(\S+)/ ){
         my $spid= $1;
         if( $rel{sp}{$spid} ){
             @{$rel{gos}{$spid}}= split(';',$2);
-#             push @{$rel{gos}{$spid}}, $2;
         }else{
             
         }
     }
 }
-
-# foreach my $elem ( sort keys %{$rel{gos}} ){
-#     print "$elem\n";
-# }
-# exit;
 
 open IN, $K_number_to_GO or die "Cant read $K_number_to_GO\n";  #  cacha los K numbers asociados a cada GO
 while(<IN>){
@@ -115,7 +87,6 @@ foreach my $sp ( sort keys %{$rel{sp}} ){
     }
     shift(@ks);
     print "'keggNA'" if @ks == 0;
-#     print shift(@ks) if @ks > 0;
     foreach my $ks ( @ks ){
         $kcnt++;
         $kcnt == 1 ? print "$ks" : print ";$ks" unless $ya{$ks}++;  #  imprime los K numbers asociados a los GO terms asociados al ID de SwissProt 
@@ -129,7 +100,6 @@ foreach my $sp ( sort keys %{$rel{sp}} ){
 	print "\t";
     shift(@cogs);
     print "'cogNA'" if @cogs == 0;
-#     print shift(@cogs) if @cogs > 0;
     foreach my $cogs ( @cogs ){
         $cogcnt++;
         $cogcnt == 1 ? print "$cogs" : print ";$cogs" unless $ya{$cogs}++;  #  imprime los COGs IDs asociados a los K numbers asociados a los GO terms asociados al ID de SwissProt
@@ -137,7 +107,6 @@ foreach my $sp ( sort keys %{$rel{sp}} ){
     print "\t";
     shift(@ecs);
     print "'ecsNA'" if @ecs == 0;
-#     print shift(@ecs) if @ecs > 0;
     foreach my $ecs ( @ecs ){
         $eccnt++;
         $eccnt == 1 ? print "$ecs" : print ";$ecs" unless $ya{$ecs}++;  #  imprime los ECs IDs asociados a los K numbers asociados a los GO terms asociados al ID de SwissProt
