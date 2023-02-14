@@ -67,7 +67,7 @@ rule merge_GO_and_KEGG_annotation:
     message:
         "Merging GO and KEGG term.."
     shell:
-        "GO_and_keggs_annot_final.l {input[0]} > {output}"
+        "pap_GO_and_keggs_annot_final.pl {input[0]} > {output}"
 
 rule annot_table:
     input:
@@ -81,6 +81,6 @@ rule annot_table:
         "Generating the annotation table.."
     shell:
         """
-        create_annotation_table.l {input[0]} {input[1]} {input[2]} {input[3]} > {output}
+        pap_create_annotation_table.pl {input[0]} {input[1]} {input[2]} {input[3]} > {output}
         rm -f GO_and_keggs_annot_final.txt PFAM.out pfam.log signalp.out signalp.STDOUT blastp_sprot.outfmt6
         """

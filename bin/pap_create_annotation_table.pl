@@ -4,7 +4,7 @@ use strict;
 @ARGV > 0 || die "usage: $0 <blastp.out> <pfam.out> <signalp.out> <GO_and_keggs_annot.table>\n";
 
 my (%par, %good, %sp, %ya);
-my $ids_vs_org= "/free/databases/sprot/id_vs_org.txt";
+my $ids_vs_org= "../../DB/id_vs_org.txt";
 my ($blastp, $pfam, $signalp, $table)= ($ARGV[0], $ARGV[1], $ARGV[2], $ARGV[3]);
 
 open IN, $blastp or die "Cant read $blastp\n"; # lee el blastp

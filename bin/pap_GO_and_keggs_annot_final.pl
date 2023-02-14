@@ -1,15 +1,12 @@
 #!/usr/bin/env perl
 use strict;
 
-
-
 @ARGV > 0 || die "usage: $0 <blastp>
 devuelve una tabla con la relacion de \"Swiss_prot_id\tGOs\tKs_numbers\tCOGs\tECs_numbers\"\n";
 
 my (%rel, %rel2, %rel3);
 my $blastp= shift;
-# my ($Goterm, $K_number_to_GO, $K_number_to_COGnumber, $K_number_to_ECnumber)= ("/free/databases/go/gene_association.goa_uniprot_noiea","/free/databases/kegg/K_number_to_GO.txt","/free/databases/kegg/K_number_to_COGnumber.txt","/free/databases/kegg/K_number_to_ECnumber.txt",);
-my ($Goterm, $K_number_to_GO, $K_number_to_COGnumber, $K_number_to_ECnumber)= ("/free/databases/go/gene_association.goa_uniprot_compact_plusproduct","/free/databases/kegg/K_number_to_GO.txt","/free/databases/kegg/K_number_to_COGnumber.txt","/free/databases/kegg/K_number_to_ECnumber.txt",);
+my ($Goterm, $K_number_to_GO, $K_number_to_COGnumber, $K_number_to_ECnumber)= ("../../DB/gene_association.goa_uniprot_compact_plusproduct","../../DB/K_number_to_GO.txt","../../DB/K_number_to_COGnumber.txt","../../DB/K_number_to_ECnumber.txt",);
 
 open IN, $blastp or die "Cant read $blastp\n";  #  cacha todos los IDs de Uniprot (SwissProt) que tengo en el blastp
 while(<IN>){
