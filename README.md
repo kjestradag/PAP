@@ -66,10 +66,10 @@ You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_sta
 
 ## Quick usage: (Install Option 2)
 
-For genome.fasta and protein.faa file name run:
+For "protein.faa" file name run:
   > snakemake --cores <thread_numbers> -s /path/of/Snakefile
 
-If genome or protein fastas files have other names, then run:
+If protein fasta files have other names, then run:
   > snakemake --cores <thread_numbers> --config PROTREF="current_protein_fasta_filename" -s /path/of/Snakefile
 
   PROTREF= "protein.faa" # Fasta file of the reference proteins that we want to transfer or annotate in our genome. Default: "protein.faa"
