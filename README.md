@@ -30,7 +30,7 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 
 PAP pipeline it is written in Snakemake and Perl. For greater convenience/ease of installing PAP, we use the [Apptainer/Singularity](https://apptainer.org/) container platform and build an image with the complete environment (script and dependencies) needed to run PAP.
 
-You just need to [download](https://figshare.com/ndownloader/files/37939014) the Singularity image **PAP** and have installed "Apptainer/Singularity". If you don't have it installed, you can install it:
+You just need to [download](https://figshare.com/ndownloader/files/PAPSIF) the Singularity image **PAP** and have installed "Apptainer/Singularity". If you don't have it installed, you can install it:
 
 **with Conda** 
 >  conda install -c conda-forge singularity 
@@ -89,4 +89,4 @@ Developers: **M.C. Karel Estrada; M.C Jerome Verleyen**
 
 PAP wouldn't be the same without my fellow researchers at the UUSMB (Unidad Universitaria de Secuenciación Masiva y Bioinformática), in particular Alejandro Sanchez.
 
-PAP uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Blastp](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) and [HMMER](http://hmmer.org/) to perform alignments and [SignalP](https://github.com/fteufel/signalp-6.0) for signal peptide prediction.
+PAP uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Blastp](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) and [HMMER](http://hmmer.org/) to perform alignments and [SignalP](https://github.com/fteufel/signalp-6.0) for signal peptide prediction. Additionally, PAP takes information from other databases such as GO and KEGG and incorporates it into the final annotation report.
