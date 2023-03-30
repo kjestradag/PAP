@@ -49,8 +49,7 @@ For more details of the Apptainer installation process, go [here](https://apptai
 
 ### Option 2
 
-Make sure you have all **dependencies** and Databases are properly installed.
-You also need to download and have in your path **all the "bin" scripts**.
+Make sure you have all **dependencies** and **databases** properly installed. You also need to download and have **all the 'bin' scripts** in your path.
 
 You can check [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) on their site for more details of this.
 
@@ -89,4 +88,4 @@ Developers: **M.C. Karel Estrada; M.C Jerome Verleyen**
 
 PAP wouldn't be the same without my fellow researchers at the UUSMB (Unidad Universitaria de Secuenciación Masiva y Bioinformática), in particular Alejandro Sanchez.
 
-PAP uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Blastp](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) and [HMMER](http://hmmer.org/) to perform alignments and [SignalP](https://github.com/fteufel/signalp-6.0) for signal peptide prediction. Additionally, PAP takes information from other databases such as GO and KEGG and incorporates it into the final annotation report.
+PAP uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Blastp](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) and [HMMER](http://hmmer.org/) to perform alignments and [SignalP](https://github.com/fteufel/signalp-6.0) for signal peptide prediction. Additionally, PAP takes information from other databases such as [GO](http://geneontology.org/) and [KEGG](https://www.genome.jp/kegg/pathway.html) and incorporates it into the final annotation report.
