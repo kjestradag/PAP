@@ -85,6 +85,9 @@ A file in tsv format with the annotation of the proteins.
 ## Authors
 **M.C. Karel Estrada; M.C Jerome Verleyen**
 
+karel.estrada@ibt.unam.mx
+Twitter: @kjestradag
+
 ## Acknowledgments
 
 PAP wouldn't be the same without advice and suggestions from Alejandro Sánchez.
