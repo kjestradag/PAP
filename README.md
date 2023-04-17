@@ -82,10 +82,11 @@ A file in tsv format with the annotation of the proteins.
 
 ![pap_output](https://user-images.githubusercontent.com/43998702/218347713-02934c45-2fcb-4413-9cd5-5a8c4728c13e.png)
 
+## Authors
+**M.C. Karel Estrada; M.C Jerome Verleyen**
+
 ## Acknowledgments
 
-Developers: **M.C. Karel Estrada; M.C Jerome Verleyen**
-
-PAP wouldn't be the same without my fellow researchers at the UUSMB (Unidad Universitaria de Secuenciación Masiva y Bioinformática), in particular Alejandro Sanchez.
+PAP wouldn't be the same without advice and suggestions from Alejandro Sánchez.
 
 PAP uses [Snakemake](https://snakemake.readthedocs.io/en/stable/index.html) for pipeline development, [Blastp](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) and [HMMER](http://hmmer.org/) to perform alignments and [SignalP](https://github.com/fteufel/signalp-6.0) for signal peptide prediction. Additionally, PAP takes information from other databases such as [GO](http://geneontology.org/) and [KEGG](https://www.genome.jp/kegg/pathway.html) and incorporates it into the final annotation report.
