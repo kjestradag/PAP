@@ -84,7 +84,7 @@ A file in tsv format with the annotation of the proteins.
 ![pap_output](https://user-images.githubusercontent.com/43998702/218347713-02934c45-2fcb-4413-9cd5-5a8c4728c13e.png)
 
 ## Citation
-Estrada K, Verleyen J. PAP:Parallel Annotation Pipeline. 2021. doi:10.5281/zenodo.7958138
+Estrada K, Verleyen J. PAP:Parallel Annotation Pipeline. 2021. [doi:10.5281/zenodo.7958138](https://zenodo.org/badge/latestdoi/600898231)
 
 ## Authors
 **M.C. Karel Estrada; M.C Jerome Verleyen**
