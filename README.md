@@ -4,7 +4,7 @@
   <h1>${{\color{red}P}arallel\ {\color{red}A}nnotation\ {\color{red}P}ipeline}$</h1>
 </div>
 
- [![DOI](https://zenodo.org/badge/600898231.svg)](https://zenodo.org/badge/latestdoi/600898231)
+![DOI](https://zenodo.org/badge/600898231.svg)
 
 ![dag](https://user-images.githubusercontent.com/43998702/218347952-633b9b35-2e9d-45b5-ad55-10a8ebe3794d.svg)
 
