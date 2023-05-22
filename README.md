@@ -91,7 +91,7 @@ Estrada K, Verleyen J. PAP:Parallel Annotation Pipeline. 2021. [doi:10.5281/zeno
 
 karel.estrada@ibt.unam.mx
 
-Twitter: [https://twitter.com/kjestradag](@kjestradag)
+Twitter: [@kjestradag](https://twitter.com/kjestradag)
 
 ## Acknowledgments
 
