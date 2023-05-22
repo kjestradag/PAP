@@ -90,6 +90,7 @@ Estrada K, Verleyen J. PAP:Parallel Annotation Pipeline. 2021. [doi:10.5281/zeno
 **M.C. Karel Estrada; M.C Jerome Verleyen**
 
 karel.estrada@ibt.unam.mx
+
 Twitter: @kjestradag
 
 ## Acknowledgments
