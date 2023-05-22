@@ -2,9 +2,8 @@
 <div align="center">
   <h1>${\color{brown}PAP}$</h1>
   <h1>${{\color{red}P}arallel\ {\color{red}A}nnotation\ {\color{red}P}ipeline}$</h1>
-  [![DOI](https://zenodo.org/badge/600898231.svg)](https://zenodo.org/badge/latestdoi/600898231)
-
 </div>
+[![DOI](https://zenodo.org/badge/600898231.svg)](https://zenodo.org/badge/latestdoi/600898231)
 
 
 
