@@ -4,7 +4,7 @@
   <h1>${{\color{red}P}arallel\ {\color{red}A}nnotation\ {\color{red}P}ipeline}$</h1>
 </div>
 
-[![DOI](https://zenodo.org/badge/264321275.svg)](https://zenodo.org/badge/latestdoi/264321275)
+
 
 ![dag](https://user-images.githubusercontent.com/43998702/218347952-633b9b35-2e9d-45b5-ad55-10a8ebe3794d.svg)
 
@@ -25,6 +25,7 @@ Additionally, PAP version for HPC cluster and its highly parallelized architectu
 > **Perl** (https://www.perl.org/get.html) (v5.30.0)
 
 [Databases](https://figshare.com/ndownloader/articles/22085267/versions/1)
+[![DOI](https://zenodo.org/badge/600898231.svg)](https://zenodo.org/badge/latestdoi/600898231)
 
 ## Installation:
 
