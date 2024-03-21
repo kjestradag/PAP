@@ -87,7 +87,7 @@ A file in tsv format with the annotation of the proteins.
 Estrada K, Verleyen J. PAP:Parallel Annotation Pipeline. 2021. [Computer software] https://doi.org/10.5281/zenodo.7958138
 
 ## Authors
-**M.C. Karel Estrada; M.C Jerome Verleyen**
+**Dr. Karel Estrada; M.C Jerome Verleyen**
 
 karel.estrada@ibt.unam.mx
 
